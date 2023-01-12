@@ -1,0 +1,26 @@
+.weather {
+  margin-top: 20px;
+  text-align: center;
+  border-radius: 20px;
+  border: 3px dashed grey;
+  padding-bottom: 30px;
+  width: max-content;
+  padding: 0px 20px 20px 20px;
+  margin-left: 25%;
+}
+.title {
+  font-size: 3rem;
+}
+.form input {
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px dashed rgb(2, 57, 88);
+  font-size: 1rem;
+}
+.btn {
+  border: 2px solid black;
+  background-color: rgb(2, 57, 88, 0.8);
+  color: white;
+  border-radius: 20px;
+  font-size: 1.3rem;
+}
