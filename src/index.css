@@ -24,6 +24,11 @@
   border-radius: 20px;
   font-size: 1.3rem;
 }
+.display {
+  margin-top: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+}
 .maincard {
   margin-top: 20px;
   text-align: left;
@@ -35,3 +40,97 @@
   margin-left: 5px;
   background-color: rgb(245, 242, 242);
 }
+.maincard .cardTitle {
+  text-align: left;
+  position: relative;
+  font-size: 1.5rem;
+}
+.temp {
+  text-align: center;
+}
+.main {
+ 
+}
+.maincard img.icon  {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.container {
+  margin-left: 50px;
+  margin-right: 50px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  font-size: 1rem;
+  width: 400px;
+  border-bottom: 2px dashed rgb(2, 57, 88);
+}
+.high-low h4{
+  text-align: left;
+  margin-right: 30px;
+  font-size: 1.2rem;
+  justify-content: left;
+  justify-items: left;
+}
+.humidity h4 {
+  text-align: left;
+  margin-right: 30px;
+  font-size: 1.2rem;
+  justify-content: left;
+  justify-items: left;
+}
+.pressure h4 {
+  text-align: left;
+  margin-right: 30px;
+  font-size: 1.2rem;
+  justify-content: left;
+  justify-items: left;
+}
+.visibility h4 {
+  text-align: left;
+  margin-right: 30px;
+  font-size: 1.2rem;
+  justify-content: left;
+  justify-items: left;
+}
+.section1 {
+  justify-self: left;
+  width: 300px;
+}
+.section2 {
+  justify-self: right;
+  width: 300px;
+}
+.wind h4 {
+  text-align: right;
+  margin-left: 100px;
+  font-size: 1.2rem;
+  justify-content: right;
+  justify-items: right;
+}
+.wind-direction h4{
+  text-align: right;
+  margin-left:30px;
+  font-size: 1.2rem;
+  justify-content: right;
+  justify-items: right;
+}
+.sunrise h4{
+  text-align: right;
+  margin-left:30px;
+  font-size: 1.2rem;
+  justify-content: right;
+  justify-items: right;
+}
+.sunset h4 {
+  text-align: right;
+  margin-left:30px;
+  font-size: 1.2rem;
+  justify-content: right;
+  justify-items: right;
+}
+

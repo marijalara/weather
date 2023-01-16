@@ -1,24 +1,32 @@
 import React from "react";
+import WeatherDetails from "./WeatherDetails";
 
 const DisplayWeather=({weather}) => {
     const iconsUrl=" http://openweathermap.org/img/wn/" + weather.weather[0].icon + ".png"
    console.log(weather)
     return(
+        <div className="display">
         <div className="maincard">
-            <span className="cardTitle">
+            <div className="cardTitle">
                 {weather.name}, {weather.sys.country}
-            </span>
-            <br />
-            <span className="date">
+            </div>
+            <div className="date">
                 {new Date().toLocaleTimeString()}
-            </span>
-            <h1>
+            </div>
+            <h1 className="temp">
                 {Math.round(weather.main.temp -273.15)} &deg;C 
             </h1>
-            <span>
+            <div className="main">
                 {weather.weather[0].main}
-            </span>
+            </div>
             <img src={iconsUrl} className="icon" alt="img"/>
+            <div className="description">
+                {weather.weather[0].description}
+            </div>
+        </div>
+        <div className="details">
+            <WeatherDetails weather={weather}/>
+        </div>
         </div>
     )
 }
