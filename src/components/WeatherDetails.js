@@ -2,62 +2,120 @@ import React from "react";
  
 const WeatherDetails=({weather}) => {
     return(
+        <React.Fragment>
         <div className="container">
-            <section className="section1">
-            <div className="high-low">
-            <h4>Higt/Low
-                &nbsp;&nbsp;
-                {Math.round(weather.main.temp_max -273.15)} / 
-                &nbsp;&nbsp;
-                {Math.round(weather.main.temp_min -273.15)} &deg;C 
-            </h4>
+            <div className="section1">
+            <table>
+                <tr>
+                <div className="high-low">
+                    <td>
+                        <h4>Higt/Low</h4>
+                    </td>
+                    <td>
+                        <span>
+                            {Math.round(weather.main.temp_max -273.15)} / 
+                            &nbsp;&nbsp;
+                            {Math.round(weather.main.temp_min -273.15)} &deg;C 
+                        </span>
+                    </td>
+                    </div>
+                </tr>
+                <tr>
+                <div className="humidity">
+                    <td>
+                        <h4>Humidity</h4>
+                    </td>
+                    <td>
+                        <span>
+                            &nbsp;&nbsp;
+                            {weather.main.humidity} %
+                        </span>
+                    </td>
+                </div>
+                </tr>
+                <tr>
+                <div className="pressure">
+                    <td>
+                        <h4>Pressure</h4>
+                    </td>
+                    <td>
+                        <span>
+                            &nbsp;&nbsp;
+                            {weather.main.pressure} hPa
+                        </span>
+                    </td>
+                </div>
+                </tr>
+                <tr>
+                <div className="visibility">
+                    <td>
+                        <h4>Visibility</h4>
+                    </td>
+                    <td>
+                        <snap>
+                            &nbsp;&nbsp;
+                            {weather.visibility /1000} km
+                        </snap>
+                    </td>
+                </div>
+                </tr>
+            </table>
             </div>
-            <div className="humidity">
-            <h4>Humidity
-                &nbsp;&nbsp;
-                {weather.main.humidity} %
-            </h4>
-            </div>
-            <div className="pressure">
-                <h4>Pressure
-                &nbsp;&nbsp;
-                {weather.main.pressure} hPa
-                </h4>
-            </div>
-            <div className="visibility">
-                <h4>Visibility
-                    &nbsp;&nbsp;
-                    {weather.visibility /1000} km
-                </h4>
-            </div>
-            </section>
-            <section className="section2">
+            <div className="section2">
+                <table>
                 <div className="wind">
-                    <h4>Wind
-                    &nbsp;&nbsp;
-                    {weather.wind.speed} m/s
-                    </h4>
+                    <td>
+                        <h4>Wind</h4>
+                    </td>
+                    <td>
+                        <span>
+                            &nbsp;&nbsp;
+                            {weather.wind.speed} m/s
+                        </span>
+                    </td>
                 </div>
+                <tr>
                 <div className="wind-direction">
-                    <h4>Wind direction
-                        &nbsp;&nbsp;
-                        {weather.wind.deg} &deg;C deg
-                    </h4>
+                    <td>
+                        <h4>Wind direction</h4>
+                    </td>
+                    <td>
+                        <span>
+                            {weather.wind.deg}&deg;C deg
+                        </span>
+                    </td>
                 </div>
+                </tr>
+                <tr>
                 <div className="sunrise">
-                    <h4>Sunrise
-                    &nbsp;&nbsp;
-                    {new Date(weather.sys.sunrise *1000).toLocaleTimeString()}
-                    </h4>
-                </div>
-                <div className="sunset">
-                    <h4>Sunset
+                    <td>
+                        <h4>Sunrise</h4>
+                    </td>
+                    <td>
+                        <span>
                         &nbsp;&nbsp;
-                        {new Date(weather.sys.sunset *1000).toLocaleTimeString()}
-                    </h4>
+                            {new Date(weather.sys.sunrise *1000).toLocaleTimeString()}  
+                        </span>
+                    </td>
                 </div>
-            </section>
+                </tr>
+                <tr>
+                <div className="sunset">
+                    <td>
+                        <h4>Sunset</h4>
+                    </td>
+                    <td>
+                        <span>
+                            &nbsp;&nbsp;
+                            {new Date(weather.sys.sunset *1000).toLocaleTimeString()}
+                        </span>
+                    </td>
+                </div>
+                </tr>
+                </table>
+            </div>
         </div>
+        </React.Fragment>
     )
 }
 
