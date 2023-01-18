@@ -3,7 +3,7 @@ import WeatherDetails from "./WeatherDetails";
 
 const DisplayWeather=({weather}) => {
     const iconsUrl=" http://openweathermap.org/img/wn/" + weather.weather[0].icon + ".png"
-   console.log(weather)
+   
     return(
         <div className="display">
         <div className="maincard">
