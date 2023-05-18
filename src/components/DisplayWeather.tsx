@@ -1,10 +1,14 @@
-import React from "react";
-import WeatherDetails from "./WeatherDetails";
+import React from 'react';
+import { WeatherData } from './Weather';
+import WeatherDetails from './WeatherDetails';
 
-const DisplayWeather=({weather}) => {
+type DisplayWeatherProps={
+    weather: WeatherData
+}
+
+const DisplayWeather: React.FC<DisplayWeatherProps> = ({weather}) => {
     const iconsUrl=" http://openweathermap.org/img/wn/" + weather.weather[0].icon + ".png"
-   
-    return(
+    return (
         <div className="display">
         <div className="maincard">
             <div className="cardTitle">

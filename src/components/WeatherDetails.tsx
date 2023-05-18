@@ -1,6 +1,11 @@
 import React from "react";
- 
-const WeatherDetails=({weather}) => {
+import { WeatherData } from "./Weather";
+
+type WeatherDetailsProps={
+    weather: WeatherData
+}
+
+const WeatherDetails: React.FC<WeatherDetailsProps>=({weather}) => {
     return(
         <div className="container">
             <div className="section1">
