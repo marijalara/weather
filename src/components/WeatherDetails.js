@@ -47,7 +47,7 @@ const WeatherDetails=({weather}) => {
             </table>
             </div>
             <div className="section2">
-                <table>
+            <table>
                 <tbody>
                 <tr>
                     <td>
@@ -85,7 +85,7 @@ const WeatherDetails=({weather}) => {
                     </td>
                 </tr>
                 </tbody>
-                </table>
+            </table>
             </div>
         </div>
     )

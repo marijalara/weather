@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import DisplayWeather from "./DisplayWeather";
 
-
 const Weather=() => {
     const key= "3b992af8e16ed54f5a57236db77f52e9"
 
